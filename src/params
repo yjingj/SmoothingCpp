@@ -1,0 +1,13 @@
+======        =======
+COMMON_FILE   ./common_params.in
+PRINT_PARAMETERS YES
+STATIONARY_SIM   YES
+======        =======
+rho           0.5
+mu            2.5
+nu            3.5
+sf             2
+snr            2
+dense         0.6
+======        =======
+//
