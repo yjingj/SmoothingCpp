@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 
-#define OUT 0
-#define IN  1
+#define BASE_OUT 0
+#define BASE_IN  1
 
 using namespace std;
 
@@ -16,7 +16,7 @@ int countWords(char *str);
 
 int countWords(char *str)
 {
-	int state = OUT;
+	int state = BASE_OUT;
 	int wc = 0;  // word count
 
 				 // Scan all characters one by one
@@ -25,14 +25,14 @@ int countWords(char *str)
 		// If next character is a separator, set the 
 		// state as OUT
 		if (*str == ' ' || *str == '\t')
-			state = OUT;
+			state = BASE_OUT;
 
 		// If next character is not a word separator and 
 		// state is OUT, then set the state as IN and 
 		// increment word count
-		else if (state == OUT)
+		else if (state == BASE_OUT)
 		{
-			state = IN;
+			state = BASE_IN;
 			++wc;
 		}
 
